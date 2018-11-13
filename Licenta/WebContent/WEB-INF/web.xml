@@ -5,20 +5,19 @@
     <welcome-file>parts/content/intro.html</welcome-file>
   </welcome-file-list>
   <servlet>
-  	<servlet-name>LoginPageController</servlet-name>
-  	<servlet-class>com.licenta.servletControllers.LoginPageController</servlet-class>
+    <servlet-name>LoginPageController</servlet-name>
+    <servlet-class>com.licenta.servletControllers.LoginPageController</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>LoginPageController</servlet-name>
-  	<url-pattern>/lContr</url-pattern>
+    <servlet-name>LoginPageController</servlet-name>
+    <url-pattern>/lContr</url-pattern>
   </servlet-mapping>
-  <!-- Create Account Controller: -->
-   <servlet>
-  	<servlet-name>CreateAccountController</servlet-name>
-  	<servlet-class>com.licenta.servletControllers.CreateAccountController</servlet-class>
+  <servlet>
+    <servlet-name>CreateAccountController</servlet-name>
+    <servlet-class>com.licenta.servletControllers.CreateAccountController</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>CreateAccountController</servlet-name>
-  	<url-pattern>/crAcc</url-pattern>
-  </servlet-mapping> 
+    <servlet-name>CreateAccountController</servlet-name>
+    <url-pattern>/crAcc</url-pattern>
+  </servlet-mapping>
 </web-app>
