@@ -3,6 +3,8 @@ package com.licenta.servletControllers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -16,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class LoginPageController extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	private Map<String,String> map = new HashMap<String, String>();
     /**
      * Default constructor. 
      */
@@ -46,7 +48,9 @@ public class LoginPageController extends HttpServlet implements Serializable {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
-		 try {
+		String user = map.get("user");
+		String pass = map.get("password");
+		try {
 	         out.println("<!DOCTYPE html>");
 	         out.println("<html><head>");
 	         out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
@@ -60,19 +64,31 @@ public class LoginPageController extends HttpServlet implements Serializable {
 	         out.println("<p>Remote Address: " + request.getRemoteAddr() + "</p>");
 	         // Generate a random number upon each request
 	         out.println("<p>A Random Number: <strong>" + Math.random() + "</strong></p>");
+	         out.println("<p>username: <strong>" + user + "</strong></p>");
+	         out.println("<p>Password: <strong>" + pass + "</strong></p>");
 	         out.println("</body>");
 	         out.println("</html>");
 	      } finally {
 	         out.close();  // Always close the output writer
 	      }
-	}
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		String userName = request.getParameter("inputEmail");
+		String password = request.getParameter("inputPassword");
+		map.put("user", userName);
+		map.put("password", password);
+		/*URL resource = getClass().getResource("/");
+		String path = resource.getPath();
+		System.out.println("PATH: " + path);*/
+		//RequestDispatcher rd = request.getRequestDispatcher("/lContr");//getServletContext().getRequestDispatcher("/Licenta/lContr");
+		//rd.forward(request, response);
+		doGet(request,response);
 	}
 
 }
