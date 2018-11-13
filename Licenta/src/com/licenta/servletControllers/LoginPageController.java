@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.licenta.db.manager.HandlerDBConnection;
+import com.licenta.db.manager.HandlerDBConnectionManager;
+
 /**
  * Servlet implementation class LoginPageController
  */
@@ -48,6 +51,8 @@ public class LoginPageController extends HttpServlet implements Serializable {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
+		Object objM = request.getSession().getAttribute("dbManager");
+		HandlerDBConnection manager = (HandlerDBConnectionManager) objM;
 		 try {
 	         out.println("<!DOCTYPE html>");
 	         out.println("<html><head>");
@@ -64,6 +69,7 @@ public class LoginPageController extends HttpServlet implements Serializable {
 	         out.println("<p>A Random Number: <strong>" + Math.random() + "</strong></p>");
 	         out.println("<p>User: <strong>" + map.get("user") +"</strong></p>");
 	         out.println("<p>Pass: <strong>" + map.get("pass") +"</strong></p>");
+	         out.println("<p>Manager: <strong>"+manager.getConnectionStatus()+"</strong></p>");
 	         out.println("</body>");
 	         out.println("</html>");
 	      } finally {

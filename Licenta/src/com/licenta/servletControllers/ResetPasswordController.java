@@ -7,21 +7,17 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import com.licenta.db.manager.HandlerDBConnection;
-import com.licenta.db.manager.HandlerDBConnectionManager;
 
 /**
- * Servlet implementation class WelcomeController
+ * Servlet implementation class ResetPasswordController
  */
-public class WelcomeController extends HttpServlet {
+public class ResetPasswordController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WelcomeController() {
+    public ResetPasswordController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,16 +29,11 @@ public class WelcomeController extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
-		final HandlerDBConnection window = new HandlerDBConnectionManager();
-					window.initConnection();
-					System.out.println(window.getConnectionStatus());
 		try {
-			request.getSession().setAttribute("dbManager", window);
-			response.sendRedirect("parts/content/intro.html");
-			/*RequestDispatcher rd = request.getRequestDispatcher("parts/content/intro.html");
-			rd.forward(request, response);*/
-		} catch(Exception e) {
-			System.out.println("e: " + e.getMessage());
+			out.print("<html><head></head><body><p>HELLO FROM RESET PASSWORD!</p></body></html>");
+		} catch(Exception e)
+		{
+			System.out.println("E rest Pass: " + e);
 		} finally {
 			out.close();
 		}

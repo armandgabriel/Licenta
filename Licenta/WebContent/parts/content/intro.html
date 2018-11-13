@@ -2,11 +2,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<<<<<<< HEAD
 <link href="../stylesheet/loginCSS.css" rel="stylesheet">
 <title>Insert title here</title>
-=======
-<link href="../stylesheet/loginCSS.css" rel="Stylesheet" >
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,6 +14,12 @@
 </head>
 </title>
 <body id="LoginForm">
+
+<!-- <%
+	request.setParameter("dbManager", session.getAttribute("dbManager"));
+	session.removeAttribute("dbManager");
+%> -->
+
 <div class="container">
 <h1 class="form-heading">login Form</h1>
 <div class="login-form">
@@ -40,7 +43,7 @@
 
         </div>
         <div class="forgot">
-        <a href="reset.html">Forgot password?</a>
+        <a href="/Licenta/ResetPassword">Forgot password?</a>
 </div>
 <div>
         <button type="submit" class="btn btn-primary">Login</button>

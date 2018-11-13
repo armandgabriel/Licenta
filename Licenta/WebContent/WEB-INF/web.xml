@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Licenta</display-name>
   <welcome-file-list>
-    <welcome-file>parts/content/intro.html</welcome-file>
+    <welcome-file>Welcome</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>LoginPageController</servlet-name>
@@ -19,5 +19,21 @@
   <servlet-mapping>
     <servlet-name>CreateAccountController</servlet-name>
     <url-pattern>/crAcc</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>WelcomeController</servlet-name>
+    <servlet-class>com.licenta.servletControllers.WelcomeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WelcomeController</servlet-name>
+    <url-pattern>/Welcome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ResetPasswordController</servlet-name>
+    <servlet-class>com.licenta.servletControllers.ResetPasswordController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetPasswordController</servlet-name>
+    <url-pattern>/ResetPassword</url-pattern>
   </servlet-mapping>
 </web-app>
