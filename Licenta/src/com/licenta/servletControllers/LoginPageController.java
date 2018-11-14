@@ -82,6 +82,7 @@ public class LoginPageController extends HttpServlet implements Serializable {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("Call after LoginPageFilter");
 		String user = request.getParameter("inputEmail");
 		String pass = request.getParameter("inputPassword");
 		map.put("user", user);

@@ -36,4 +36,12 @@
     <servlet-name>ResetPasswordController</servlet-name>
     <url-pattern>/ResetPassword</url-pattern>
   </servlet-mapping>
+  <filter>
+  	<filter-name>LoginPageFilter</filter-name>
+  	<filter-class>com.licenta.servletFIlters.LoginPageFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginPageFilter</filter-name>
+  	<url-pattern>/*lContr</url-pattern>
+  </filter-mapping> 
 </web-app>
