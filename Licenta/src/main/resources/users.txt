@@ -1,0 +1,5 @@
+id,user,pass,age,name,role,history
+1,armand.camner@gmail.com,1234,03/06/1993,Armand,1,no_history
+2,sorin.camner@gmail.com,1234,01/08/1968,Sorin,1,no_history
+3,georgeta.camner@gmail.com,1234,29/08/1964,Georgeta,1,no_history
+4,monica.rinchita@gmail.com,1234,07/02/1997,Monica,1,no_history
