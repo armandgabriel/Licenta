@@ -20,7 +20,6 @@
     <servlet-name>CreateAccountController</servlet-name>
     <url-pattern>/crAcc</url-pattern>
   </servlet-mapping>
-<<<<<<< HEAD
   <servlet>
     <servlet-name>WelcomeController</servlet-name>
     <servlet-class>com.licenta.servletControllers.WelcomeController</servlet-class>
@@ -43,8 +42,6 @@
   </filter>
   <filter-mapping>
   	<filter-name>LoginPageFilter</filter-name>
-  	<url-pattern>/*lContr</url-pattern>
+  	<url-pattern>/lContr</url-pattern>
   </filter-mapping> 
-=======
->>>>>>> refs/heads/master
 </web-app>

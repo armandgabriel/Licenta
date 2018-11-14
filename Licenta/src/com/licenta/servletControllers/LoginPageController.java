@@ -16,16 +16,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.licenta.db.manager.HandlerDBConnection;
 import com.licenta.db.manager.HandlerDBConnectionManager;
 
+
 /**
  * Servlet implementation class LoginPageController
  */
 public class LoginPageController extends HttpServlet implements Serializable {
 	private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
 	private Map<String, String> map = new HashMap<String, String>();
-=======
-	private Map<String,String> map = new HashMap<String, String>();
->>>>>>> refs/heads/master
     /**
      * Default constructor. 
      */
@@ -55,15 +52,11 @@ public class LoginPageController extends HttpServlet implements Serializable {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
-<<<<<<< HEAD
 		Object objM = request.getSession().getAttribute("dbManager");
 		HandlerDBConnection manager = (HandlerDBConnectionManager) objM;
-		 try {
-=======
 		String user = map.get("user");
 		String pass = map.get("password");
 		try {
->>>>>>> refs/heads/master
 	         out.println("<!DOCTYPE html>");
 	         out.println("<html><head>");
 	         out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
@@ -77,14 +70,9 @@ public class LoginPageController extends HttpServlet implements Serializable {
 	         out.println("<p>Remote Address: " + request.getRemoteAddr() + "</p>");
 	         // Generate a random number upon each request
 	         out.println("<p>A Random Number: <strong>" + Math.random() + "</strong></p>");
-<<<<<<< HEAD
 	         out.println("<p>User: <strong>" + map.get("user") +"</strong></p>");
 	         out.println("<p>Pass: <strong>" + map.get("pass") +"</strong></p>");
 	         out.println("<p>Manager: <strong>"+manager.getConnectionStatus()+"</strong></p>");
-=======
-	         out.println("<p>username: <strong>" + user + "</strong></p>");
-	         out.println("<p>Password: <strong>" + pass + "</strong></p>");
->>>>>>> refs/heads/master
 	         out.println("</body>");
 	         out.println("</html>");
 	      } finally {
@@ -97,26 +85,12 @@ public class LoginPageController extends HttpServlet implements Serializable {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
 		System.out.println("Call after LoginPageFilter");
 		String user = request.getParameter("inputEmail");
 		String pass = request.getParameter("inputPassword");
 		map.put("user", user);
 		map.put("pass", pass);
 		doGet(request, response);
-=======
-		//doGet(request, response);
-		String userName = request.getParameter("inputEmail");
-		String password = request.getParameter("inputPassword");
-		map.put("user", userName);
-		map.put("password", password);
-		/*URL resource = getClass().getResource("/");
-		String path = resource.getPath();
-		System.out.println("PATH: " + path);*/
-		//RequestDispatcher rd = request.getRequestDispatcher("/lContr");//getServletContext().getRequestDispatcher("/Licenta/lContr");
-		//rd.forward(request, response);
-		doGet(request,response);
->>>>>>> refs/heads/master
 	}
 
 }
