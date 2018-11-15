@@ -20,15 +20,14 @@ public class CreateAccountController extends HttpServlet {
      */
     public CreateAccountController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();
+		System.out.println("GET CA");
+		/*PrintWriter out = response.getWriter();
 		 try {
 	         out.println("<!DOCTYPE html>");
 	         out.println("<html><head>");
@@ -40,15 +39,15 @@ public class CreateAccountController extends HttpServlet {
 	         out.println("</html>");
 	      } finally {
 	         out.close();  // Always close the output writer
-	      }
+	      }*/
+		response.sendRedirect("parts/content/accountCreationPage.jsp");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		System.out.println("POST");
 	}
 
 }
