@@ -47,10 +47,11 @@ if(cookies !=null)
 {
 	for(Cookie cookie : cookies)
 	{
-		if(cookie.getName().equals("user")) 
+		if(cookie.getName().equals("user") && cookie.getValue().equals(request.getParameter("name"))) 
 		{	
 			userName = cookie.getValue();
 			age = cookie.getMaxAge();
+			break;
 		}
 	} 
 }
@@ -60,6 +61,7 @@ if(cookies !=null)
   <h2>Basic Table</h2>
   <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
  
+ <a href="/Licenta/parts/content/logoutServlet.jsp">Logout</a>
 </div>
 </body>
 </html>

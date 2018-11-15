@@ -103,6 +103,7 @@ public class LoginPageController extends HttpServlet implements Serializable {
 			Cookie loginCookie = new Cookie("user", us.getName());
 			loginCookie.setMaxAge(30*60);
 			response.addCookie(loginCookie);
+			request.setAttribute("name", us.getName());
 			map.put("user", user);
 			map.put("name", us.getName());
 			map.put("pass", pass);
