@@ -7,4 +7,5 @@ public abstract class HandlerDBConnection {
 	public abstract String getConnectionStatus();
 	public abstract boolean checkUser(String user, String pass);
 	public abstract User getLoggedUserData();
+	public abstract void signUser(User user);
 }
