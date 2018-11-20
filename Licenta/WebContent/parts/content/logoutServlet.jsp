@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Login Success Page</title>
+<title>Sort - Management 1.1v</title>
 </head>
 <body>
 
