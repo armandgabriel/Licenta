@@ -1,12 +1,16 @@
 package com.licenta.db.manager;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 
@@ -21,6 +25,7 @@ public class HandlerDBConnectionManager extends HandlerDBConnection {
 	List<User> userList = new ArrayList<User>();
 	List<String> header = new ArrayList<String>();
 	User loggedUser = null;
+	List<Integer> idList = new ArrayList<Integer>();
 	@Override
 	public void initConnection() {
 		// TODO Auto-generated method stub
@@ -56,14 +61,14 @@ public class HandlerDBConnectionManager extends HandlerDBConnection {
 			{
 				if(counter == 0)
 				{
-					for(int i = 1;i<=6;i++)
+					for(int i = 0;i<=6;i++)
 					{
 						header.add(line.split("\\,",-1)[i]);
 					}
-					counter++;
 				}
 				if(header.size()>0 && counter > 0)
 				{
+					idList.add(Integer.parseInt(line.split("\\,", -1)[0]));
 					userList.add(new User(line.split("\\,",-1)[1],
 							line.split("\\,",-1)[2],
 							line.split("\\,",-1)[3],
@@ -71,6 +76,7 @@ public class HandlerDBConnectionManager extends HandlerDBConnection {
 							line.split("\\,", -1)[5],
 							line.split("\\,", -1)[6]));
 				}
+				counter++;
 			}
 			System.out.println();
 			for(String s : header)
@@ -131,6 +137,52 @@ public class HandlerDBConnectionManager extends HandlerDBConnection {
 	public User getLoggedUserData() {
 		// TODO Auto-generated method stub
 		return loggedUser;
+	}
+
+	@Override
+	public void signUser(User user) {
+		 
+				//getServletContext().getRealPath("/WEB-INF");
+		File test = new File(getClass().getClassLoader().getResourceAsStream(usersProperties).toString());
+		System.out.println(test.getAbsolutePath());
+		
+		InputStream in = HandlerDBConnectionManager.class.getResourceAsStream("/main/resources/users.txt");
+		
+		
+		InputStream filePath = getClass().getClassLoader().getResourceAsStream(usersProperties);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(filePath));
+		FileWriter fw = null;
+		BufferedWriter bw = null;
+		PrintWriter out = null;
+		try 
+		{
+			fw = new FileWriter(getClass().getClassLoader().getResourceAsStream(usersProperties).toString(),true);
+			bw = new BufferedWriter(fw);
+			File f = new File(getClass().getClassLoader().getResource(usersProperties).toString());
+			FileOutputStream fos = new FileOutputStream(f);
+			out = new PrintWriter(bw);
+			int id = idList.size()+1;
+			String line = id+","+user.getUserName()+","+user.getPassword()+","+user.getAge()+","+user.getName()+","+user.getRole()+","+user.getHistory();
+			out.println(line);
+			idList.add(id);
+			fw.flush();
+			bw.flush();
+			out.flush();
+			
+		} catch(Exception e)
+		{
+			System.out.println("write error: " + e.getMessage());
+		} finally {
+			try {
+				out.close();
+				bw.close();
+				fw.close();
+			} catch (Exception ex)
+			{
+				System.out.println("close error: " + ex.getMessage());
+			}
+		}
+	
 	}
 
 }
