@@ -7,7 +7,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <meta charset="ISO-8859-1">
-<title>Create Account Page</title>
+<title>Sort - Management 1.1v</title>
 </head>
 <body>
 <div class="container">

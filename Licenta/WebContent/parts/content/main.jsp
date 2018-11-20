@@ -10,7 +10,7 @@
 
 
 
-<title>Insert title here</title>
+<title>Sort - Management 1.1v</title>
 
 <link href="../stylesheet/loginCSS.css" rel="Stylesheet" >
 
@@ -23,6 +23,11 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js">
+		function homePage() {
+			$('#contentSelected').load('/Licenta/parts/content/homePageDisplay.html');
+		}
+	</script>
 </head>
 </title>
 <body class="container">
@@ -32,7 +37,7 @@
       <a class="navbar-brand" href="#">SortManagement</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="#" onclick="homePage();">Home</a></li>
       <li><a href="#">View History</a></li>
       <li><a href="#">Action</a></li>
       <li><a href="#">Timer Action</a></li>
@@ -60,7 +65,7 @@ if(cookies !=null)
 	<div class="container">
   <h2>Basic Table</h2>
   <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
- 
+<div id="contentSelected"></div>
  <a href="/Licenta/parts/content/logoutServlet.jsp">Logout</a>
 </div>
 </body>
