@@ -50,7 +50,6 @@ public class LoginPageFilter implements Filter {
 			} 
 			res.sendRedirect("Welcome");
 		}
-
 	}
 
 	/**

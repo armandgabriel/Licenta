@@ -1,5 +1,12 @@
 id,user,pass,age,name,role,history
-1,armand.camner@gmail.com,1234,03/06/1993,Armand,1,no_history
-2,sorin.camner@gmail.com,1234,01/08/1968,Sorin,1,no_history
-3,georgeta.camner@gmail.com,1234,29/08/1964,Georgeta,1,no_history
-4,monica.rinchita@gmail.com,1234,07/02/1997,Monica,1,no_history
+0,armand.camner@gmail.com,1234,03/06/1993,Armand,1,no_history
+1,sorin.camner@gmail.com,1234,01/08/1968,Sorin,1,no_history
+2,georgeta.camner@gmail.com,1234,29/08/1964,Georgeta,1,no_history
+3,monica.rinchita@gmail.com,1234,07/02/1997,Monica,1,no_history
+4,test@gmail.com,k8sCUsn4znQIjb3V6HAvlVg7y1rDw/IdpfAz3wbZ40MJiRXYLmM4ceuSx9pKNaNCVaQ2UDc2+pWTEdHaaynI2g==,Mon Dec 10 18:20:22 EET 2018,Test1 Test Test11,0,no_history
+5,test@gmail.com,k8sCUsn4znQIjb3V6HAvlVg7y1rDw/IdpfAz3wbZ40MJiRXYLmM4ceuSx9pKNaNCVaQ2UDc2+pWTEdHaaynI2g==,Mon Dec 10 18:22:54 EET 2018,test44 test2 test45,0,no_history
+6,afa@asfa,DX0eFSAu6vzUETrU4KhjRagGyRlFM8i+3bIOdcXP1HX8AQVjdTv6jukqk3i35jT6AtsKkQ6fVbyTs62Gmfr/gw==,Tue Dec 11 09:57:37 EET 2018,asdafa avgsaga asfagasga,0,no_history
+7,sg4fsdf@sfa,ByrXh1N9+Uoma01upDbxO/NUPqb0kadLZQJ26SnNjynxiP3/7LM2kwOhojfe5wxY9km6WXugEkjgT4lf1Hv0tQ==,Tue Dec 11 09:58:07 EET 2018,fgdsggs gdsgdsgdsg gdsg,0,no_history
+8,armand.camner@gmail.com,pyx1fV+cnU4QWrXh9Nbsc8s73cywqDVvNeX7C4H/N10E7st6F113kpcj/eMMgK3nZpc83fvbeIS2hPHt7sUxLw==,Fri Feb 08 15:00:15 EET 2019,Cornel Armand Vasile,0,no_history
+9,ion.ion@gmail.com,pyx1fV+cnU4QWrXh9Nbsc8s73cywqDVvNeX7C4H/N10E7st6F113kpcj/eMMgK3nZpc83fvbeIS2hPHt7sUxLw==,Fri Feb 08 15:07:21 EET 2019,Ion Ion22 Ion2,0,no_history
+10,pass1@gmail.com,bdshPqikTNXEaRTSbr0CqonzajTplP7DcH0FHaJmXCN4qx3EuNXO9SDaK8aD8zMF4wOEWNNCRM55IPbDBLpgpw==,Fri Feb 08 15:10:16 EET 2019,pass1 pass1 pass1,0,no_history:User Creation
