@@ -36,12 +36,20 @@
     <servlet-name>ResetPasswordController</servlet-name>
     <url-pattern>/ResetPassword</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <servlet-name>DownloadManager</servlet-name>
+    <servlet-class>com.licenta.servletControllers.DownloadManager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadManager</servlet-name>
+    <url-pattern>/DownloadManager</url-pattern>
+  </servlet-mapping>
   <filter>
-  	<filter-name>LoginPageFilter</filter-name>
-  	<filter-class>com.licenta.servletFIlters.LoginPageFilter</filter-class>
+    <filter-name>LoginPageFilter</filter-name>
+    <filter-class>com.licenta.servletFIlters.LoginPageFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>LoginPageFilter</filter-name>
-  	<url-pattern>/lContr</url-pattern>
-  </filter-mapping> 
+    <filter-name>LoginPageFilter</filter-name>
+    <url-pattern>/lContr</url-pattern>
+  </filter-mapping>
 </web-app>

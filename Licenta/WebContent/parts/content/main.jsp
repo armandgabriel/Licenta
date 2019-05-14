@@ -68,5 +68,9 @@ if(cookies !=null)
 <div id="contentSelected"></div>
  <a href="/Licenta/parts/content/logoutServlet.jsp">Logout</a>
 </div>
+<div>
+	My application:
+	<a href="/Licenta/DownloadManager">Application start</a>
+</div>
 </body>
 </html>
